@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import "my.css";
 
@@ -38,15 +38,15 @@ const Navbar = () => {
               <span className="sr-only">Your Company</span>
             </a>
           </div>
-          <div className="flex lg:hidden -mt-2 h-4 w-6 ">
+          <div className="flex lg:hidden -mt-2  ">
             <button
               type="button"
-              className="w-10 h-12 inline-fleitems-center justify-center rounded-md p-2.5 text-gray-700 navglass mobile-nav-toggle"
+              className="w-10 h-12  inline-items justify-center rounded-md p-2.5 text-gray-700  mobile-nav-toggle"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <div className="h-16 w-12 flex">
-                <Bars4Icon className="h-full w-full" aria-hidden="true" />
+              <div className="h-12 w-10 flex mr-4 -mt-4 navglass">
+                <Bars3Icon className="h-full w-full" aria-hidden="true" />
               </div>
             </button>
           </div>
