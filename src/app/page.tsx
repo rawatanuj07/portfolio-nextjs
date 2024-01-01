@@ -1,9 +1,12 @@
 import Image from 'next/image'
-
-export default function Home() {
+import Navbar from './components/navbar/page'
+import Hero from './components/hero/page'
+export default function Default() {
   return (
-<div><h1>Website Under Maintenance Staging.</h1>
-<p>For further queries contact: rawatanuj07@gmail.com</p></div>
+    <div >
+    <Navbar />
+    <Hero />
+  </div>
 
   )
 }
