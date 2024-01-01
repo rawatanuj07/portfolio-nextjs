@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="flex lg:hidden -mt-2 h-4 w-6 ">
             <button
               type="button"
-              className="w-10 h-12 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 navglass mobile-nav-toggle"
+              className="w-10 h-12 inline-fleitems-center justify-center rounded-md p-2.5 text-gray-700 navglass mobile-nav-toggle"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
