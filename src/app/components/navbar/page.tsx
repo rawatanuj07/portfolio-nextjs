@@ -20,6 +20,7 @@ const Navbar = () => {
 
   const handleMobileNavToggle = () => {
     setMobileNavActive(!mobileNavActive);
+    
   };
 
   return (
@@ -41,12 +42,13 @@ const Navbar = () => {
           <div className="flex lg:hidden -mt-2  ">
             <button
               type="button"
-              className="w-10 h-12  inline-items justify-center rounded-md p-2.5 text-gray-700  mobile-nav-toggle"
+              className="w-10 h-12  inline-items justify-center rounded-md p-2.5 text-gray-700  mobile-nav-toggle "
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <div className="h-12 w-10 flex mr-4 -mt-4 navglass">
-                <Bars3Icon className="h-full w-full" aria-hidden="true" />
+              <Bars3Icon className="h-full w-full" aria-hidden="true" />
+
               </div>
             </button>
           </div>
@@ -72,11 +74,11 @@ const Navbar = () => {
         </nav>
         <Dialog
           as="div"
-          className=" mobile-nav-toggle lg:hidden fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform ease-in-out duration-800"
-          open={mobileMenuOpen}
+          className={`lg:hidden fixed inset-y-0 right-0 z-50 w-1/2 overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform transform ${
+            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}        open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
-          <div className="flex items-center justify-between" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
@@ -89,11 +91,11 @@ const Navbar = () => {
               </a>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700 "
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
-                {/* <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
+                <XMarkIcon className="h-8 w-8 mobile-nav-toggle navglass" aria-hidden="true" />
               </button>
             </div>
             <div className="mt-6 flow-root">
