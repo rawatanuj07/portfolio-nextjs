@@ -74,9 +74,9 @@ const Navbar = () => {
         </nav>
         <Dialog
           as="div"
-          className={`lg:hidden fixed inset-y-0 right-0 z-50 w-1/2 overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform transform ${
-            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}        open={mobileMenuOpen}
+          className={`lg:hidden fixed inset-y-0 right-0 z-50 w-1/2 overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform transition-opacity delay-200 transform ${
+            mobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+          }`}       open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
