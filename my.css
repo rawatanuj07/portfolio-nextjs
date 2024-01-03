@@ -4,6 +4,23 @@
     margin-top: 2px;
     padding-top: 2px;
   }
+  .transition-slow {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  .text-E80358 {
+    color: #E80358;
+  }
+  .scale-0 {
+    transform: scale(0);
+  }
+  .bleffect{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)10%    , rgba(0, 0, 0, 1));
+
+  }
+  .scale-100 {
+    transform: scale(1);
+  }
+  
 
   .mobile-nav-toggle {
     color: #E80358;

@@ -1,6 +1,7 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import 'my.css';
+
 import { Long_Cang } from 'next/font/google'
 const long_cang = Long_Cang({ weight: "400", subsets: ['latin'] })
 
@@ -15,11 +16,12 @@ export default function Typewriter() {
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 100,
+      backSpeed: 70,
+      backDelay: 1000,
     //   smartBackspace: true,
       showCursor: false,
       loop: true,
+      
 
     });
 
