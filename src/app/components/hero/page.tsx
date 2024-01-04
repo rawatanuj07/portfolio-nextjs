@@ -3,8 +3,10 @@ import React from "react";
 import Video from "next-video";
 import Typewriter from "../typewriter/page";
 import "my.css";
-import { Long_Cang, Roboto, Diphylleia } from "next/font/google";
-const long_cang = Long_Cang({ weight: "400", subsets: ["latin"] });
+import {  Roboto } from "next/font/google";
+
+
+
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 const soboto = Roboto({ weight: "300", subsets: ["latin"] });
 
@@ -12,7 +14,9 @@ const soboto = Roboto({ weight: "300", subsets: ["latin"] });
 // import myVideo from '/videos/herobg/desktop.mp4';
 
 export default function Hero() {
+ 
   return (
+    
     <div className="relative w-full h-screen overflow-hidden">
       {/* Desktop/Laptop Video */}
       <video
@@ -43,7 +47,7 @@ export default function Hero() {
         <source src="/herobg/mobile.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div></div>
+      <div> </div>
 
       {/* Mobile Typewriter */}
       <div className="absolute bottom-0  left-0 w-full h-1/2 flex-col items-center justify-center lg:hidden md:hidden">
@@ -59,6 +63,7 @@ export default function Hero() {
           <div
             className={`${roboto.className} ml-2 pb-6 mt-2 pl-1 text-5xl underline text-underline-red text-thin`}
           >
+            
             <Typewriter />
           </div>{" "}
         </div>
