@@ -4,7 +4,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Howl } from "howler";
 import { TbMusicHeart } from "react-icons/tb";
-import { TbMusicOff } from "react-icons/tb";
+import { TbMusicX } from "react-icons/tb";
 import { useState } from "react";
 import "my.css";
 
@@ -32,7 +32,7 @@ const Navbar = () => {
 
       const sound1 = new Howl({
         src: ["/audio/keyb.mp3"],
-        volume: 1.0,
+        volume: 0.9,
         rate: 0.7,
         loop: true,
       });
@@ -45,7 +45,7 @@ const Navbar = () => {
 
       const sound2 = new Howl({
         src: ["/audio/audiofbg.mp3"],
-        volume: 1.0,
+        volume: 0.7,
         rate: 1.0,
         loop: true,
       });
@@ -91,7 +91,7 @@ const Navbar = () => {
         >
           <div className="navglass music-icon md:p-1">
             {isPlaying ? (
-              <TbMusicOff
+              <TbMusicX
                 className="text-4xl font-semibold text-E80358 leading-4 text-gray-900 cursor-pointer rotating "
                 onClick={handleButtonClick}
               />
