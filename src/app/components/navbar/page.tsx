@@ -45,7 +45,7 @@ const Navbar = () => {
 
       const sound2 = new Howl({
         src: ["/audio/audiofbg.mp3"],
-        volume: 0.7,
+        volume: 0.6,
         rate: 1.0,
         loop: true,
       });
@@ -89,7 +89,7 @@ const Navbar = () => {
           className="flex items-center justify-between p-6 -mt-2 lg:px-8 "
           aria-label="Global"
         >
-          <div className="navglass music-icon md:p-1">
+          <div className="md:hidden navglass music-icon md:p-1">
             {isPlaying ? (
               <TbMusicX
                 className="text-4xl font-semibold text-E80358 leading-4 text-gray-900 cursor-pointer rotating "
@@ -131,18 +131,31 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold text-E80358 leading-6 text-gray-900"
               >
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="sm:hidden md:block navglass music-icon p-1 mr-4">
+            {isPlaying ? (
+              <TbMusicX
+                className="text-4xl font-semibold text-E80358 leading-4 text-gray-900 cursor-pointer rotating "
+                onClick={handleButtonClick}
+              />
+            ) : (
+              <TbMusicHeart
+                className="text-4xl font-semibold text-E80358 leading-4 text-gray-900 cursor-pointer rotating "
+                onClick={handleButtonClick}
+              />
+            )}
+          </div>
             <a
               href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 mt-3 text-E80358 text-gray-900"
             >
-              Log in <span aria-hidden="true">&rarr;</span>
+              Connect-Now! <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </nav>
