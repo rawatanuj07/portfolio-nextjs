@@ -31,7 +31,7 @@ const Navbar = () => {
       setAudioContext1(context1);
 
       const sound1 = new Howl({
-        src: ["/audio/keyb.mp3"],
+        src: ["/audio/keys.mp3"],
         volume: 0.9,
         rate: 0.7,
         loop: true,
@@ -44,7 +44,7 @@ const Navbar = () => {
       setAudioContext2(context2);
 
       const sound2 = new Howl({
-        src: ["/audio/audiofbg.mp3"],
+        src: ["/audio/audiobg.mp3"],
         volume: 0.6,
         rate: 1.0,
         loop: true,
